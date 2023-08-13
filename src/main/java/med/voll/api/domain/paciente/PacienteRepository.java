@@ -7,9 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 public interface PacienteRepository extends JpaRepository<Paciente,Long> {
     @Query("""
             select p.ativo
-            from Pacientes p 
+            from Paciente p
             where
             p.id = :id
             """)
-    Boolean finAtivoById(Long idPaciente);
+    Boolean finAtivoById(Long id);
 }
